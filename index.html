@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMT Kalkulator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .container {
+        background-color: #1a202c;
+        color: #e2e8f0;
+        max-width: 100%; /* Adjust this as needed */
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      @media (max-width: 640px) {
+        /* Adjust styles for mobile devices */
+        .container {
+          padding: 0.5rem;
+        }
+      }
+
+      table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        border: 1px solid #4a5568;
+      }
+
+      input,
+      select,
+      button {
+        background-color: #2d3748;
+        color: #e2e8f0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      input:focus,
+      select:focus {
+        background-color: #4a5568;
+      }
+
+      #calculate-btn {
+        background-color: #711d1d;
+      }
+
+      #calculate-btn:hover {
+        background-color: #c46e6e;
+      }
+      table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        border: 1px solid #4a5568;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #4a5568;
+      }
+
+      footer {
+        color: #ffff;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900">
+    <div class="container md:w-1/2 lg:w-1/2">
+      <h1 class="text-2xl font-bold mb-4 text-center">Indeks Massa Tubuh</h1>
+      <div class="flex flex-col space-y-2">
+        <label for="weight-input">Berat Badan(kg):</label>
+        <input type="text" id="weight-input" class="border border-gray-300 p-2" />
+        <label for="height-input">Tinggi Badan(cm):</label>
+        <input type="text" id="height-input" class="border border-gray-300 p-2" />
+        <label for="age-input">Usia:</label>
+        <input type="text" id="age-input" class="border border-gray-300 p-2" />
+        <label for="gender-input">Jenis Kelamin:</label>
+        <select id="gender-input" class="border border-gray-300 p-2">
+          <option value="male">Laki-laki</option>
+          <option value="female">Perempuan</option>
+        </select>
+        <button id="calculate-btn" class="bg-blue-500 text-white px-4 py-2 rounded">Hitung</button>
+      </div>
+      <div id="result" class="mt-4"></div>
+      <div id="report-table" class="mt-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  <footer class="text-center fw-light">
+    <p>&copy; Copy Rights Rhio Bagus Sadewo</p>
+  </footer>
+</html>

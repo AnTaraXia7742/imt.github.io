@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="initial-scale=1.0" />
     <title>IMT Kalkulator</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -25,11 +25,12 @@
         }
       }
 
-      table {
-        width: 100%;
-        margin-top: 20px;
-        border-collapse: collapse;
-        border: 1px solid #4a5568;
+      #report-table {
+        margin-top: 1rem; /* Add margin to separate from the form */
+        background-color: #2d3748;
+        color: #e2e8f0;
+        border-radius: 1rem;
+        padding: 1rem; /* Add padding for spacing */
       }
 
       input,
@@ -87,7 +88,7 @@
         <button id="calculate-btn" class="bg-blue-500 text-white px-4 py-2 rounded">Hitung</button>
       </div>
       <div id="result" class="mt-4"></div>
-      <div id="report-table" class="mt-4"></div>
+      <div id="report-table" class="mt-4 container text-center"></div>
     </div>
 
     <script src="script.js"></script>
